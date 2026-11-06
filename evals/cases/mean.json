@@ -1,0 +1,8 @@
+{
+  "description": "mean() divides by n - 1.",
+  "fixture": "fixtures/mean.sh",
+  "command": "review-blockers",
+  "expect": [
+    {"label": "wrong mean", "file": "src/stats.py", "lines": [1, 10], "levels": ["blocker", "high"], "any_of": ["mean", "n - 1", "n-1", "len(values) - 1", "zerodivision"]}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "description": "Three planted merge blockers across Python and React.",
+  "fixture": "fixtures/shop.sh",
+  "command": "review-blockers",
+  "config": {"checks": [{"name": "compile", "run": "python3 -m py_compile src/payments.py src/users.py", "timeout": 60}]},
+  "expect": [
+    {"label": "double charge on retry", "file": "src/payments.py", "lines": [1, 20], "levels": ["blocker", "high"], "any_of": ["charge", "retry", "idempot", "twice"]},
+    {"label": "SQL injection", "file": "src/users.py", "lines": [1, 10], "levels": ["blocker"], "any_of": ["sql", "inject"]},
+    {"label": "endless fetch loop", "file": "web/src/Orders.tsx", "lines": [1, 12], "levels": ["blocker", "high"], "any_of": ["loop", "every render", "refetch", "endless", "dependenc"]}
+  ]
+}

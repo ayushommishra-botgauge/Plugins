@@ -1,0 +1,8 @@
+{
+  "description": "A real bug from our history: the commit that introduced it, and its parent as the base.",
+  "repo": {"path": "~/code/your-repo", "commit": "<sha of the commit with the bug>", "base": "<sha of its parent, or the PR base>"},
+  "command": "review-blockers",
+  "expect": [
+    {"label": "what the bug was", "file": "path/to/file.py", "lines": [100, 140], "levels": ["blocker", "high"], "any_of": ["keyword from the bug", "another keyword"]}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "description": "A correct, documented, tested helper. Any merge blocker or high finding is a false alarm.",
+  "fixture": "fixtures/clean.sh",
+  "command": "review-blockers",
+  "expect": []
+}
