@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "botgauge-plugins",
+  "owner": {
+    "name": "BotGauge"
+  },
+  "metadata": {
+    "description": "BotGauge's Claude Code plugins for the engineering team.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "botgauge",
+      "source": "./plugins/botgauge",
+      "description": "Code review before git push, for any repo: merge blockers, high, medium and low findings with a fix command for each, and a pre-push check.",
+      "version": "0.1.0",
+      "category": "code-review"
+    }
+  ]
+}

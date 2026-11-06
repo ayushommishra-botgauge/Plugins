@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "botgauge",
+  "version": "0.1.0",
+  "description": "Code review before git push, for any repo: bugs, security, public API, docstrings and docs, tests, quality, backend performance and frontend API calls. Findings are merge blockers, high, medium or low, each with its own fix command, and a pre-push check stops pushes while a merge blocker is open.",
+  "author": {
+    "name": "BotGauge"
+  },
+  "homepage": "https://github.com/ayushommishra-botgauge/Plugins",
+  "repository": "https://github.com/ayushommishra-botgauge/Plugins",
+  "license": "MIT",
+  "keywords": [
+    "code-review",
+    "security-review",
+    "docstrings",
+    "pre-push",
+    "quality"
+  ]
+}
