@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "pre_push": {
+    "mode": "block",
+    "auto_review": true,
+    "timeout_minutes": 15
+  },
+  "checks": [
+    {"name": "lint", "run": "ruff check .", "timeout": 120, "on_fix": true},
+    {"name": "types", "run": "cd packages/core && pyright src", "timeout": 300, "on_fix": true},
+    {"name": "tests", "run": "pytest -q", "timeout": 900, "on_fix": true}
+  ],
+  "on_edit": {
+    "python": ["ruff format {file}", "ruff check --fix {file}"],
+    "typescript": ["npx --no-install prettier --write {file}", "npx --no-install eslint --fix {file}"]
+  },
+  "published": true,
+  "docstring_style": {"python": "google", "typescript": "tsdoc"},
+  "paths": {
+    "skip": ["docs/generated/**"],
+    "frontend": [],
+    "backend": [],
+    "sensitive": ["src/auth/**", "src/billing/**"],
+    "public_api": []
+  },
+  "low_cap": 5
+}
